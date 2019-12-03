@@ -1,0 +1,67 @@
+body{
+
+background-image:url(/images/g1.jpg);
+
+}
+#welcome{
+font-family: 'Alegreya', serif;
+
+
+}
+#imgs{
+overflow: hidden;
+  animation: animate 16s ease-in-out infinite;
+
+}
+h1{
+text-align:center;
+font-family: 'Alegreya', serif;
+}
+h2{
+text-align:center;
+font-family: 'Alegreya', serif;
+}
+#about{
+background-color:grey;
+padding:30px;
+font-family: 'Alegreya', serif;
+
+}
+#testimonials{
+background-color:wheat;
+text-align:center;
+font-family: 'Alegreya', serif;
+}
+
+
+
+@keyframes animate{
+  0%, 100%{
+      background-image: url('../images/g1.jpg');
+      height: 600px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  25%{
+      background-image: url('../images/ms.jpg');
+      height: 600px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  50%{
+    background-image: url('../images/ms2.jpg');
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  75%{
+    background-image: url('../images/money.jpeg');
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  }
