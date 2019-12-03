@@ -1,26 +1,30 @@
-import spark.ModelAndView;
-import java.util.ArrayList;
-import java.util.HashMap;
-import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import dao.Sql2oGroup;
+import models.Group;
+import org.sql2o.Connection;
+import org.sql2o.Sql2o;
+import spark.ModelAndView;
+import spark.template.handlebars.HandlebarsTemplateEngine;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import static spark.Spark.staticFileLocation;
+import java.util.ArrayList;
 import static spark.Spark.*;
 
 public class App {
 
     public static void main(String[] args) {
-        ProcessBuilder process = new ProcessBuilder();
-        Integer port;
+      
+        Sql2oGroup groupDao;
+        Connection con;
+        Gson gson = new Gson();
 
-        if (process.environment().get("PORT") != null) {
-            port = Integer.parseInt(process.environment().get("PORT"));
-        } else {
-            port = 4567;
-        }
+        String connectionString = "jdbc:postgresql://localhost:5432/ekub";
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
 
-        port(port);
+        groupDao = new Sql2oGroup(sql2o);
+
         staticFileLocation("/public");
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -41,6 +45,17 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
+
+        get("/group", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            if(groupDao.getAll().size() > 0){
+                List<Group> group = groupDao.getAll();
+                model.put("group", group);
+            } else {
+                System.out.println("You have no group added to your ekub db");
+            }
+            return new ModelAndView(model, "group.hbs");
+        }, new HandlebarsTemplateEngine());
 
     }
 }
