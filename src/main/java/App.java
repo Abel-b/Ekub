@@ -1,4 +1,5 @@
 
+import com.google.gson.Gson;
 import dao.Sql2oGroup;
 import models.Group;
 import org.sql2o.Connection;
@@ -21,7 +22,7 @@ public class App {
         Gson gson = new Gson();
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
 
         groupDao = new Sql2oGroup(sql2o);
 
