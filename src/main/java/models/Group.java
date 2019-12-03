@@ -2,6 +2,7 @@ package models;
 
 public class Group {
 
+
     private int id;
     private String groupname;
     public final int groupsize;
@@ -29,5 +30,6 @@ public class Group {
 
     public void setGroupname(String groupname) {
         this.groupname = groupname;
+
     }
 }
