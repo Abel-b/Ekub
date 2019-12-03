@@ -19,7 +19,5 @@ dependencies {
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
-    compile 'com.google.code.gson:gson:2.5'
-    compile "com.sparkjava:spark-core:2.6.0"
-    compile "com.sparkjava:spark-template-handlebars:2.5.5"
+
 }
