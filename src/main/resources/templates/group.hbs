@@ -1,0 +1,20 @@
+{{#partial "content"}}
+{{#each group}}
+    <div class="col-md-4">
+        <div class="card">
+            <div class="container">
+                <h3>Group: {{groupname}} </h3>
+                <p>Size: {{groupsize}}</p>
+                <p>Payment Amount: {{grouppayment}}</p>
+                <p>Round Period: {{groupround}}</p>
+                <p>Id: {{ id }}</p>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+
+</div>
+{{/partial}}
+
+{{> layout.hbs}}

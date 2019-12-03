@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS usertable(
     password VARCHAR,
     email VARCHAR,
     phone int,
-    groupid int,
+    groupid int
 );
 
 CREATE TABLE IF NOT EXISTS grouptable(
@@ -15,11 +15,11 @@ CREATE TABLE IF NOT EXISTS grouptable(
     groupname VARCHAR,
     groupsize int,
     groupround VARCHAR,
-    grouppayment int,
+    grouppayment int
 );
 
 CREATE TABLE IF NOT EXISTS contribution(
     id serial PRIMARY KEY,
-    payment boolean,
+    payment boolean
 
 )
