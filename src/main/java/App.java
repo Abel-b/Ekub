@@ -18,7 +18,6 @@ public class App {
       
         Sql2oGroup groupDao;
         Connection con;
-        Gson gson = new Gson();
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
         Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
@@ -35,16 +34,16 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "Signinform.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/signup", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "Signupform.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/contactus", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "contactus.hbs");
         }, new HandlebarsTemplateEngine());
-
-
 
         get("/group", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -56,6 +55,23 @@ public class App {
             }
             return new ModelAndView(model, "group.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/groupForm", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "groupForm.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/group", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = req.queryParams("groupname");
+            String round = req.queryParams("groupround");
+            int pay = Integer.parseInt(req.queryParams("grouppayment"));
+            int size = Integer.parseInt(req.queryParams("groupsize"));
+            Group groupNew = new Group(name, size, pay, round);
+            groupDao.add(groupNew);
+            return new ModelAndView(model, "group.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
     }
 }
