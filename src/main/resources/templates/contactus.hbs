@@ -1,5 +1,26 @@
 {{#partial "content"}}
 <h1>Contact details here</h1>
+<div class="container">
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+<div class="content">
+    <form action="#">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="Your country..">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
 {{/partial}}
 
 {{> layout.hbs}}
