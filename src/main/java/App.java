@@ -21,7 +21,7 @@ public class App {
         Connection con;
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
 
         groupDao = new Sql2oGroup(sql2o);
 
@@ -45,9 +45,10 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "contactus.hbs");
         }, new HandlebarsTemplateEngine());
-        get("/login", (request, response) -> {
+
+        get("/signin", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "login.hbs");
+            return new ModelAndView(model, "signinform.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/group", (request, response) -> {

@@ -32,7 +32,14 @@ background-color:wheat;
 text-align:center;
 font-family: 'Alegreya', serif;
 }
-
+.card {
+  box-shadow: 0 4px 8px 0 #d4af37;
+  transition: 0.3s;
+  width: 60%;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 lightskyblue;
+}
 
 
 @keyframes animate{
