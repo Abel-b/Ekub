@@ -5,9 +5,9 @@ public class Group {
 
     private int id;
     private String groupname;
-    public final int groupsize;
-    public final int grouppayment;
-    public final String groupround;
+    private int groupsize;
+    private int grouppayment;
+    private String groupround;
 
     public Group(String groupname, int groupsize, int grouppayment, String groupround) {
         this.groupname = groupname;
@@ -31,5 +31,29 @@ public class Group {
     public void setGroupname(String groupname) {
         this.groupname = groupname;
 
+    }
+
+    public int getGroupsize() {
+        return groupsize;
+    }
+
+    public void setGroupsize(int groupsize) {
+        this.groupsize = groupsize;
+    }
+
+    public int getGrouppayment() {
+        return grouppayment;
+    }
+
+    public void setGrouppayment(int grouppayment) {
+        this.grouppayment = grouppayment;
+    }
+
+    public String getGroupround() {
+        return groupround;
+    }
+
+    public void setGroupround(String groupround) {
+        this.groupround = groupround;
     }
 }

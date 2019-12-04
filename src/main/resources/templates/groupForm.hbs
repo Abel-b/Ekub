@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <h3>Create an Ekub Group</h3>
+    <form action="/group" method="post">
+        <div class="container">
+            <div class="form-name">
+                <label for="groupname">Group Name</label>
+                <input type="text" name="groupname" required>
+            </div>
+            <div class="form-round">
+                <label for="groupround">Group Round</label>
+                <input type="text" name="groupround" required>
+            </div>
+            <div class="form-health">
+                <label for="groupsize">Group Size</label>
+                <input type="number" name="groupsize" min="3" max="10" required>
+            </div>
+            <div class="form-age">
+                <label for="grouppayment">Group Payment (Ksh)</label>
+                <input type="number" name="grouppayment" min="1" required>
+            </div>
+            <button type="submit" name="button" class="btn btn-success">Create Group</button>
+        </div>
+    </form>
+{{/partial}}
+{{> layout.hbs}}
