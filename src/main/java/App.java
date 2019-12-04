@@ -1,4 +1,5 @@
 
+import com.google.gson.Gson;
 import dao.Sql2oGroup;
 import models.Group;
 import org.sql2o.Connection;
@@ -20,7 +21,7 @@ public class App {
         Connection con;
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
+        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
 
         groupDao = new Sql2oGroup(sql2o);
 
@@ -43,6 +44,10 @@ public class App {
         get("/contactus", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "contactus.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/login", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "login.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/group", (request, response) -> {
