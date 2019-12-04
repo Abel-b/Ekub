@@ -20,8 +20,13 @@ public class App {
         Sql2oGroup groupDao;
         Connection con;
 
+
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
         Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
+
+
+
+
 
         groupDao = new Sql2oGroup(sql2o);
 
