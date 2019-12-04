@@ -19,10 +19,10 @@ public class App {
       
         Sql2oGroup groupDao;
         Connection con;
-        Gson gson = new Gson();
+
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
+        Sql2o sql2o = new Sql2o(connectionString, "keith", "1234");
 
         groupDao = new Sql2oGroup(sql2o);
 

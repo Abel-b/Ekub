@@ -65,3 +65,23 @@ font-family: 'Alegreya', serif;
     background-size: cover;
   }
   }
+  input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color:black;
+  }
+
+  .content {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    color:white;
+    width:60%;
+    margin-left:20%;
+  }
