@@ -6,7 +6,6 @@ background-image:url(/images/g1.jpg);
 #welcome{
 font-family: 'Alegreya', serif;
 
-
 }
 #imgs{
 overflow: hidden;
@@ -40,6 +39,9 @@ color:white;
 #logo{
 border-radius: 50%;
 text-align: center;
+}
+#contact{
+background-image:url(/images/contact1.jpg);
 }
 
 
