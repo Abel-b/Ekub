@@ -78,10 +78,7 @@ text-align: center;
   background: #bb0000;
   color: white;
 }
-.content {
-  margin-left: 75px;
-  font-size: 30px;
-}
+
 .card {
   box-shadow: 0 4px 8px 0 #d4af37;
   transition: 0.3s;
@@ -170,8 +167,6 @@ body, html {
    transform: translate3d(-50%, -50%, 0);
 }
 
-
-
 .demo .main-title {
    text-transform: uppercase;
    font-size: 4.2em;
@@ -185,7 +180,6 @@ body, html {
     width: 50%;
     margin-left: 25%;
 
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -193,7 +187,6 @@ body, html {
       font-size: 3em;
    }
 }
-
 
 #move {
   /* animation: heartbeat 4s infinite; */
@@ -210,29 +203,7 @@ body, html {
   60% {
     transform: translateY(-45px);
   }
-  }
-  input[type=text], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    color:black;
-  }
 
-  .content {
-    border-radius: 5px;
-    background-color: rgba(0,0,0,0.5);
-    padding: 20px;
-    color:white;
-    width:60%;
-    margin-left:20%;
-  }
-
-}
 
 #logo:hover {
   animation: shake 0.5s;
