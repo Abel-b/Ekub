@@ -115,6 +115,7 @@ public class App {
 
     }
 
+    //encrypt user password with sha-512 message digest
     private static String encryptPassword(String passwordString) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
