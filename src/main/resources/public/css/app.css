@@ -26,10 +26,14 @@ text-align:center;
 #about{
 background-color: white;
 font-family: 'Alegreya', serif;
-font-size:30px;
+font-size:22px;
 opacity: 1;
 color: black;
 }
+.foot{
+    color: black;
+}
+
 #testimonials{
 background-image: url("/images/review.jpg");
 background-attachment: fixed;
@@ -67,6 +71,66 @@ text-align:center;
 image-radius:50%;
 }
 
+
+.footer{
+    position: absolute;
+}
+
+.image {
+  width:100%;
+  clip-path: polygon(0 0, 100% 0, 100% 42%, 0 23%);
+}
+
+.groups {
+    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer_logo a
+{
+font-size: 40px;
+line-height: 1.95;
+color:black;
+font-weight: 400;
+font-family: 'Mansalva', cursive;
+}
+.copyright
+{
+width: 90%;
+text-align: center;
+font-size: 14px;
+font-weight: 800;
+color: black;
+margin-right: 20%;
+}
+.footer_social
+{
+width: 30%;
+text-align: right;
+}
+.footer_social ul li
+{
+display: inline-block;
+}
+.footer_social ul li:not(:last-child)
+{
+margin-right: 26px;
+}
+.footer_social ul li a i
+{
+font-size: 20px;
+color: black;
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+.footer_social ul li a i:hover
+{
+color: #black;
+}
 
 
 .icon-bar {
@@ -193,6 +257,8 @@ body, html {
 
 .main-title .thin {
    font-weight: 200;
+   font-family: 'Alegreya', serif;
+
 }
 .demo{
     width: 50%;
