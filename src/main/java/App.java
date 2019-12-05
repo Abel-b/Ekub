@@ -86,7 +86,7 @@ public class App {
             } else {
                 if (user.getPassword().equals(encryptPassword(password))) {
                     System.out.println(response.body());
-                    response.redirect("/");
+                    response.redirect("/home");
                     return null;
                 } else {
                     Map<String, Object> hashMap = new HashMap<>();
@@ -95,6 +95,10 @@ public class App {
                     return new ModelAndView(hashMap, "Signinform.hbs");
                 }
             }
+        }, new HandlebarsTemplateEngine());
+        get("/home", "text/html", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "main.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/signin", (request, response) -> {

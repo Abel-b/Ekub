@@ -20,12 +20,6 @@
                                        name="password" required>
                             </div>
                             <br>
-
-
-                            <!--                            <div class="custom-control custom-checkbox mb-3">-->
-                            <!--                                <label class="custom-control-label" for="customCheck1">Remember password</label>-->
-                            <!--                                <input type="checkbox" class="custom-control-input" id="customCheck1">-->
-                            <!--                            </div>-->
                             <br>
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in
                             </button>
@@ -36,6 +30,12 @@
             </div>
         </div>
     </div>
+{{/partial}}
+{{#partial "navbar"}}
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    </ul>
+
 {{/partial}}
 
 {{> layout.hbs}}

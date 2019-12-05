@@ -102,6 +102,17 @@ transition: all 200ms ease;
 color: #black;
 }
 
+.main {
+text-align: center;
+font-weight: 400;
+font-family: 'Mansalva', cursive;
+background-color: lightgreen;
+}
+
+.main-text{
+background-color: mintcream;
+}
+
 
 .icon-bar {
   position: fixed;
