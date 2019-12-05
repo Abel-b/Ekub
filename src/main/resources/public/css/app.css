@@ -1,17 +1,18 @@
 #landing{
-
-background-image:url(/images/g1.jpg);
-
+    background-color: #d4af37
 }
+
 #welcome{
 font-family: 'Alegreya', serif;
 
-}
-#imgs{
-overflow: hidden;
-  animation: animate 16s ease-in-out infinite;
 
 }
+#imgs{
+  overflow: hidden;
+
+  animation: animate 16s ease-in-out infinite;
+}
+
 h1{
 text-align:center;
 font-family: 'Alegreya', serif;
@@ -21,20 +22,23 @@ text-align:center;
 font-family: 'Alegreya', serif;
 }
 #about{
-background-color:grey;
-padding:30px;
+background-color: white;
 font-family: 'Alegreya', serif;
 font-size:30px;
-opacity:0.6;
-color:white;
+opacity: 1;
+color: black;
+
+
 }
 #testimonials{
-background-color:black;
+background-image: url("/images/review.jpg");
+background-attachment: fixed;
+background-repeat: no-repeat;
 text-align:center;
 font-family: 'Alegreya', serif;
 font-size:30px;
-opacity:0.6;
-color:white;
+color: black;
+width: 80%;
 }
 #logo{
 border-radius: 50%;
@@ -111,6 +115,92 @@ padding:150px;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 lightskyblue;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("/images/money.jpeg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.large-header {
+   position: relative;
+   width: 100%;
+   background: #111;
+   overflow: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 1;
+}
+
+.demo .large-header {
+   background-image: url("/images/darkmoney.png");
+   background-attachment: fixed;
+   height: 50%;
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 20%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+
+
+
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+.demo{
+    width: 50%;
+    margin-left: 25%;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+   .demo .main-title {
+      font-size: 3em;
+   }
 }
 
 
@@ -192,9 +282,31 @@ padding:150px;
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+@keyframes animate{
+  0%, 100%{
+      background-image: url('/images/money.jpeg');
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+  }
+  25%{
+    background-image: url('/images/p1.png');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75%{
+    background-image: url('/images/ms2.jpg');
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
 
-
-
+  }
 
 
 
