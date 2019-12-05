@@ -4,16 +4,16 @@ CREATE DATABASE ekub;
 CREATE TABLE IF NOT EXISTS usertable(
     id serial PRIMARY KEY,
     username VARCHAR,
-    password VARCHAR,
     email VARCHAR,
-    phone int,
-    groupid int
+    phonenumber INTEGER,
+    password VARCHAR
+--    groupid int
 );
 
 CREATE TABLE IF NOT EXISTS grouptable(
     id serial PRIMARY KEY,
     groupname VARCHAR,
-    groupsize int,
+    groupsize INTEGER,
     groupround VARCHAR,
     grouppayment int
 );
