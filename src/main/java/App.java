@@ -22,7 +22,7 @@ public class App {
 
 
         String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "moringa", "berhane1234");
+        Sql2o sql2o = new Sql2o(connectionString, "kevin", "1234");
 
 
 

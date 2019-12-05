@@ -1,18 +1,17 @@
+body{
+background-repeat:no-repeat;
+}
 #landing{
     background-color: #d4af37
 }
 
 #welcome{
 font-family: 'Alegreya', serif;
-
-
 }
 #imgs{
   overflow: hidden;
-
   animation: animate 16s ease-in-out infinite;
 }
-
 h1{
 text-align:center;
 font-family: 'Alegreya', serif;
@@ -21,14 +20,15 @@ h2{
 text-align:center;
 font-family: 'Alegreya', serif;
 }
+h3{
+text-align:center;
+}
 #about{
 background-color: white;
 font-family: 'Alegreya', serif;
 font-size:30px;
 opacity: 1;
 color: black;
-
-
 }
 #testimonials{
 background-image: url("/images/review.jpg");
@@ -47,12 +47,6 @@ text-align: center;
 #contact{
 background-image:url(/images/contact1.jpg);
 }
-#signup{
-background-image:url(/images/signup.jpg);
-font-family: 'Alegreya', serif;
-font-size:20px;
-color:white;
-}
 #signup1{
 width:90%;
 padding:150px;
@@ -61,8 +55,18 @@ padding:150px;
  margin: auto;
   width: 100%;
   padding: 10px;
-  font-family: 'Alegreya', serif;
 }
+#groupform{
+padding:100px;
+border:2px solid grey;
+background-color:black;
+opacity:0.6;
+}
+#slogo{
+text-align:center;
+image-radius:50%;
+}
+
 
 
 .icon-bar {
@@ -111,7 +115,8 @@ padding:150px;
 .card {
   box-shadow: 0 4px 8px 0 #d4af37;
   transition: 0.3s;
-  width: 60%;
+  width: 100%;
+  margin-left:40%;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 lightskyblue;
@@ -166,7 +171,6 @@ body, html {
    background-attachment: fixed;
    height: 50%;
 }
-
 .main-title {
    position: absolute;
    margin: 0;
