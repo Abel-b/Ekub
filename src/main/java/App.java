@@ -25,8 +25,17 @@ public class App {
         Connection con;
 
 
+
+
+
+
+
+
+
+
         groupDao = new Sql2oGroup(DB.sql2o);
         sql2oUserDao = new Sql2oUserDao(DB.sql2o);
+
 
         staticFileLocation("/public");
         get("/", (request, response) -> {
@@ -42,6 +51,10 @@ public class App {
         get("/signup", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "Signupform.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/login", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "login.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/contactus", (request, response) -> {

@@ -1,4 +1,15 @@
 {{#partial "content"}}
+
+
+<div id="signup">
+    <div class="container-fluid" id="signup1">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body"  id="signform">
+                        <h5 class="card-title text-center">Sign Up <i class="fa fa-cog fa-spin" style="font-size:24px"></i></h5>
+                        <form class="form-signin" action="/signup">
+
     <div class="container">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -6,6 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Sign Up</h5>
                         <form class="form-signin" method="post" name="signUpForm" action="/signup">
+
                             <div class="form-label-group">
                                 <label for="Username">Username</label>
                                 <input type="text" id="username" class="form-control" placeholder="Username"
@@ -31,14 +43,17 @@
                             </div>
                             <br>
 
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in
-                            </button>
+
+                            <button id="contactbtn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"><span>Sign in</span></button>
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br><br>
+</div>
 {{/partial}}
 
-{{> layout.hbs}}
+{{> layout2.hbs}}

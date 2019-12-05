@@ -1,13 +1,17 @@
+body{
+background-repeat:no-repeat;
+}
 #landing{
     background-color: #d4af37
 }
 
 #welcome{
 font-family: 'Alegreya', serif;
+}
+#imgs{
   overflow: hidden;
   animation: animate 16s ease-in-out infinite;
 }
-
 h1{
 text-align:center;
 font-family: 'Alegreya', serif;
@@ -15,6 +19,9 @@ font-family: 'Alegreya', serif;
 h2{
 text-align:center;
 font-family: 'Alegreya', serif;
+}
+h3{
+text-align:center;
 }
 #about{
 background-color: white;
@@ -41,6 +48,29 @@ width: 80%;
 border-radius: 50%;
 text-align: center;
 }
+#contact{
+background-image:url(/images/contact1.jpg);
+}
+#signup1{
+width:90%;
+padding:150px;
+}
+#signform{
+ margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+#groupform{
+padding:100px;
+border:2px solid grey;
+background-color:black;
+opacity:0.6;
+}
+#slogo{
+text-align:center;
+image-radius:50%;
+}
+
 
 .footer{
     position: absolute;
@@ -145,10 +175,12 @@ color: #black;
   margin-left: 75px;
   font-size: 30px;
 }
+
 .card {
   box-shadow: 0 4px 8px 0 #d4af37;
   transition: 0.3s;
-  width: 60%;
+  width: 100%;
+  margin-left:40%;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 lightskyblue;
@@ -203,7 +235,6 @@ body, html {
    background-attachment: fixed;
    height: 50%;
 }
-
 .main-title {
    position: absolute;
    margin: 0;
@@ -242,6 +273,28 @@ body, html {
    }
 }
 
+
+#contactbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#contactbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#contactbtn:hover span {
+  padding-right: 25px;
+}
+#contactbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 #move {
   /* animation: heartbeat 4s infinite; */
@@ -325,7 +378,9 @@ body, html {
 
   }
 
-}
+
+
+
 
 
 

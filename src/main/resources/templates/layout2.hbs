@@ -2,18 +2,17 @@
 <html>
 <head>
     <title>{{#block "title"}}EKUB{{/block}}</title>
+    <link rel="shortcut icon" href="images/p2.png" id="logo">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 
     {{#block "css"}}
-    <link href="/css/app.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
         <link href="/css/login.css" rel="stylesheet">
     {{/block}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="/css/styles.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -27,14 +26,14 @@
 
 
 </head>
-<body style="background-color:black;">
+<body style="background-image:url(/images/wall3.jpg);;color:white;font-family: 'Alegreya', serif;font-size:20px;">
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand">EKUB</a>
-        </div>
         <ul class="nav navbar-nav">
+            <li><img src="images/Logo.jpeg" width="80" id="logo"></li>
             <li class="active"><a href="/">Home</a></li>
+            <li class="group"><a href="/group">Groups</a> </li>
+            <li class="groupForm"><a href="/groupForm">Create a Group</a> </li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Page 1-1</a></li>
@@ -51,21 +50,14 @@
     </div>
 </nav>
 
-<div class="container">
+<div>
 
     <div class="col-md-12">
         {{#block "content"}}
         {{/block}}
     </div>
 </div>
-
 {{#block "footer"}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-    <script src="/js/validate.js"></script>
-
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
