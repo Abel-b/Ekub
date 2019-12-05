@@ -21,14 +21,18 @@ public class App {
         Connection con;
 
 
-        String connectionString = "jdbc:postgresql://localhost:5432/ekub";
-        Sql2o sql2o = new Sql2o(connectionString, "keith", "1234");
 
 
 
 
 
-        groupDao = new Sql2oGroup(sql2o);
+
+
+
+        groupDao = new Sql2oGroup(DB.sql2o);
+        sql2oUserDao = new Sql2oUserDao(DB.sql2o);
+
+
 
         staticFileLocation("/public");
         get("/", (request, response) -> {
@@ -44,6 +48,10 @@ public class App {
         get("/signup", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "Signupform.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/login", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "login.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/contactus", (request, response) -> {

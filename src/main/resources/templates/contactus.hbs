@@ -1,6 +1,14 @@
 {{#partial "content"}}
-<h1>Contact details here</h1>
-<div class="container">
+    <div class="icon-bar" >
+        <a id="social" href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a id="social" href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a id="social" href="#" class="google"><i class="fa fa-google"></i></a>
+        <a id="social" href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a id="social" href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="container-fluid" >
+<h1>CONTACT US</h1>
+
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
 <div class="content">
@@ -14,13 +22,14 @@
         <label for="country">Country</label>
         <input type="text" id="country" name="country" placeholder="Your country..">
 
-        <label for="subject">Subject</label>
+        <label for="subject">Message</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        <button id="contactbtn" type="submit" value="Submit" class="btn btn-primary"><span>SEND MESSAGE</span></button>
     </form>
+
 </div>
 </div>
 {{/partial}}
 
-{{> layout.hbs}}
+{{> layout3.hbs}}

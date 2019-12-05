@@ -1,7 +1,8 @@
 {{#partial "content"}}
-    <h3>Create an Ekub Group</h3>
-    <form action="/group" method="post">
-        <div class="container">
+
+    <h3><i class="fa fa-cog fa-spin" style="font-size:24px"></i>CREATE AN EKUB GROUP<i class="fa fa-cog fa-spin" style="font-size:24px"></i></h3>
+    <form action="/group" method="post" id="groupform">
+        <div class="container" id="groupform1">
             <div class="form-name">
                 <label for="groupname">Group Name</label>
                 <input type="text" name="groupname" required>
@@ -10,16 +11,20 @@
                 <label for="groupround">Group Round</label>
                 <input type="text" name="groupround" required>
             </div>
-            <div class="form-health">
+            <div class="form-size">
                 <label for="groupsize">Group Size</label>
                 <input type="number" name="groupsize" min="3" max="10" required>
             </div>
-            <div class="form-age">
+            <div class="form-payment">
                 <label for="grouppayment">Group Payment (Ksh)</label>
                 <input type="number" name="grouppayment" min="1" required>
             </div>
-            <button type="submit" name="button" class="btn btn-success">Create Group</button>
+            <br>
+            <br>
+            <button id="contactbtn" type="submit" name="button" class="btn btn-success"><span>CREATE GROUP</span></button>
         </div>
     </form>
+
+
 {{/partial}}
-{{> layout.hbs}}
+{{> layout1.hbs}}
