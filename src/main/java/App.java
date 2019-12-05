@@ -1,13 +1,18 @@
 
 import com.google.gson.Gson;
+import dao.DB;
+import dao.Sql2oUserDao;
 import dao.Sql2oGroup;
 import models.User;
-import dao.Sql2oUserDao;
 import models.Group;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
+
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,23 +25,14 @@ public class App {
     public static void main(String[] args) {
 
         Sql2oGroup groupDao;
+        Sql2oUserDao sql2oUserDao;
         Connection con;
-
-
-
-
-
-
-
-
-
 
         groupDao = new Sql2oGroup(DB.sql2o);
         sql2oUserDao = new Sql2oUserDao(DB.sql2o);
 
-
-
         staticFileLocation("/public");
+
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "index.hbs");
@@ -51,6 +47,7 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "Signupform.hbs");
         }, new HandlebarsTemplateEngine());
+
         get("/login", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "login.hbs");
@@ -144,9 +141,35 @@ public class App {
             int size = Integer.parseInt(req.queryParams("groupsize"));
             Group groupNew = new Group(name, size, pay, round);
             groupDao.add(groupNew);
-            return new ModelAndView(model, "group.hbs");
+            res.redirect("/group");
+            return null;
         }, new HandlebarsTemplateEngine());
 
+        get("/terms", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "Terms.hbs");
+        }, new HandlebarsTemplateEngine());
 
+        get("/success", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+    }
+    //encrypt user password with sha-512 message digest
+    private static String encryptPassword(String passwordString) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
+            byte[] messageDigestResult = messageDigest.digest(passwordString.getBytes());
+            BigInteger signNum = new BigInteger(1, messageDigestResult);
+            String hashText = signNum.toString(16);
+            while (hashText.length() < 32) {
+                hashText = "0".concat(hashText);
+            }
+            return hashText;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
