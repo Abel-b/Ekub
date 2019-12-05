@@ -16,7 +16,7 @@ import static spark.Spark.*;
 public class App {
 
     public static void main(String[] args) {
-      
+
         Sql2oGroup groupDao;
         Connection con;
 
@@ -81,10 +81,6 @@ public class App {
             Group groupNew = new Group(name, size, pay, round);
             groupDao.add(groupNew);
             return new ModelAndView(model, "group.hbs");
-        }, new HandlebarsTemplateEngine());
-        get("/Terms&Conditions", (request, response) -> {
-            Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "Terms.hbs");
         }, new HandlebarsTemplateEngine());
 
 
